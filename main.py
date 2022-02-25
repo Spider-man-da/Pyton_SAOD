@@ -1,5 +1,6 @@
 import random
 import math
+import time
 
 def Generator(m=50,n=50,min_limit=-250,max_limit=1004):
     print("Generator: ")
@@ -184,13 +185,22 @@ m,n=int(s[0]),int(s[1])
 s=input("Введите диапазон генерации: ").split()
 min_limit,max_limit=int(s[0]),int(s[1])
 
-massive_sort_funtion=[Selection_sort,Insertion_sort,Heap_sort,Quick_sort,Shell_Sort,Bubble_sort,Tournament_Sort]
+massive_sort_funtion=[Selection_sort,Insertion_sort,Heap_sort,Tournament_Sort,Quick_sort,Shell_Sort,Bubble_sort]
+time_massive=[]
+
+matrix_0=Generator(m,n,min_limit,max_limit)
 
 for func in massive_sort_funtion:
-    matrix=Generator(m,n,min_limit,max_limit)
+    matrix=matrix_0
     print(*matrix,sep="\n")
     print()
+
+    time=time.time()
     matrix=func(matrix,m,n)
+    time1=time.time()-time1
+    time_massive.append(time1)
+
     print(*matrix,sep="\n")
+    print("Время выполенения: ",'%.2f' %time1," c.")
     print()
 

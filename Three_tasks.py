@@ -11,7 +11,6 @@ def task1():
         for j in range(i+1,len(m)):
             for k in range(j+1,len(m)):
                 m2=sorted([m[i],m[j],m[k]])
-                print(m2)
                 if m2[0]+m2[1]>m2[2]:
                     max_sum=sum(m2)
                     break
@@ -19,6 +18,7 @@ def task1():
         if max_sum!=0: break
 
     print(max_sum)
+
 def task2():
     m = [i for i in input().split()]
 
@@ -36,6 +36,7 @@ def task2():
 
     m3=list(zip(m,m2))
 
+
     m4=sorted(m3,key=lambda x: x[1],reverse=True)
 
     result=""
@@ -44,6 +45,7 @@ def task2():
         result+=i[0]
 
     print(result)
+
 def task3():
     s = input().split()
     m,n=int(s[0]),int(s[1])
@@ -70,7 +72,6 @@ def task3():
             mas.append(matrix[a][b])
 
         mas.sort()
-        print(mas)
         a,b,k=i,j,0
         matrix[a][b]=mas[k]
 
@@ -89,3 +90,4 @@ def task3():
         for j in range(n):
             print(str(matrix[i][j]).ljust(2),end='')
         print()
+
