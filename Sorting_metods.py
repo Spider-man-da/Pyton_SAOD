@@ -203,4 +203,3 @@ for func in massive_sort_funtion:
     print(*matrix,sep="\n")
     print("Время выполенения: ",'%.2f' %time1," c.")
     print()
-
