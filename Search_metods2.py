@@ -130,10 +130,9 @@ else: print("Число не найдено")
 print(print(print()))
 
 def conflict(state, col):
-    # Конфликтная функция, строка - строка, столбец - столбец
     row = len(state)
     for i in range(row):
-        if abs(state[i] - col) in (0, row - i):  # важный оператор
+        if abs(state[i] - col) in (0, row - i):
             return True
     return False
 
